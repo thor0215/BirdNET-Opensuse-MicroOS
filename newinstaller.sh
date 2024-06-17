@@ -5,10 +5,10 @@ if [ "$EUID" == 0 ]
   exit
 fi
 
-if [ "$(uname -m)" != "aarch64" ];then
+if [ "$(uname -m)" != "x86_64" ];then
   echo "BirdNET-Pi requires a 64-bit OS.
 It looks like your operating system is using $(uname -m),
-but would need to be aarch64.
+but would need to be x86_64.
 Please take a look at https://birdnetwiki.pmcgui.xyz for more
 information"
   exit 1
