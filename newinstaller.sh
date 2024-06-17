@@ -28,8 +28,8 @@ for cmd in git jq ; do
   fi
 done
 if [[ ! -z $PACKAGES_MISSING ]] ; then
-  sudo apt update
-  sudo apt -y install $PACKAGES_MISSING
+  sudo transactional-update pkg install $PACKAGES_MISSING
+  reboot
 fi
 
 branch=main
